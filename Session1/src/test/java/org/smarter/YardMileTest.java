@@ -24,7 +24,6 @@ public class YardMileTest {
     public void one_mile_not_equals_to_1761_yard_test() {
         Mile oneMile = new Mile(1);
         Yard yard = new Yard(1761);
-
         Assert.assertFalse(oneMile.equals(yard));
     }
 
@@ -50,4 +49,24 @@ public class YardMileTest {
         Assert.assertTrue(twoMiles.equals(yard));
 
     }
+
+    @Test
+    public void feet_3_equals_to_1_yard_test() {
+        Feet feet = new Feet(3);
+        Yard yard = new Yard(1);
+        Assert.assertTrue(feet.equals(yard));
+    }
+    @Test
+    public void feet_6_equals_to_2_yard_test() {
+        Feet feet = new Feet(6);
+        Yard yard = new Yard(2);
+        Assert.assertTrue(feet.equals(yard));
+    }
+    @Test
+    public void feet_5280_equals_to_1_mile_test() {
+        Feet feet = new Feet(5280);
+        Mile mile = new Mile(1);
+        Assert.assertTrue(feet.equals(mile));
+    }
+
 }

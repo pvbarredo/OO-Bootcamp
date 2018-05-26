@@ -1,7 +1,7 @@
 package org.smarter;
 
 public class Yard {
-    int amount;
+    public int amount;
 
     public Yard(int amount) {
         this.amount = amount;
@@ -16,7 +16,7 @@ public class Yard {
             return (this.amount * 36) == ((Inch)obj).amount;
         }
         if (obj.getClass().equals(Feet.class)) {
-            return ((Feet)obj).amount == 3 ;
+            return (this.amount * 3) == ((Feet)obj).amount;
         }
         return ((Yard) obj).amount == this.amount;
     }

@@ -1,9 +1,10 @@
 package org.smarter;
 
 public class Feet {
-    public int amount;
 
-    public Feet(int amount) {
+    public double amount;
+
+    public Feet(double amount) {
         this.amount = amount;
     }
 
@@ -13,8 +14,14 @@ public class Feet {
             return false;
         }
         if(obj.getClass().equals(Inch.class)){
-            return (this.amount * 12) == ((Inch)obj).amount;
+            return ((Inch) obj).amount == this.amount * 12;
         }
-        return true;
+        if(obj.getClass().equals(Yard.class)){
+            return ((Yard) obj).amount == this.amount / 3;
+        }
+        if(obj.getClass().equals(Mile.class)){
+            return ((Mile) obj).amount == this.amount * 0.000189394;
+        }
+        return false;
     }
 }

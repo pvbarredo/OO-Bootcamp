@@ -57,4 +57,12 @@ public class YardMileFeetInchTest {
         Inch inch = new Inch(1);
         Assert.assertFalse(inch.equals(null));
     }
+
+    @Test
+    public void yard_2_equals_to_6_feet() {
+        Yard yard = new Yard(2);
+        Feet feet = new Feet(6);
+        Assert.assertTrue(yard.equals(feet));
+    }
+
 }

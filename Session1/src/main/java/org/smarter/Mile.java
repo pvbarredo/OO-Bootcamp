@@ -2,7 +2,6 @@ package org.smarter;
 
 public class Mile {
      public int amount;
-    private Object mile;
 
     public Mile(int amount) {
         this.amount = amount;
